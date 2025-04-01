@@ -11,7 +11,7 @@
      <!-- v-bind 디렉티브 : 단방향 바인딩-->
      <!-- v-model 디렉티브 : 양방향 바인딩-->
     <input type="text" v-model="valueModel">
-    <p>{{ valueModel+ 1000 }}, {{ typeof valueModel }}</p>
+    <p>{{ valueModel + 1000 }}, {{ typeof valueModel }}</p>
     <input type="number" v-model.lazy="numberModel">
     <p>{{ numberModel }}, {{ numberModel + 10000 }}</p>
     <select v-model="selectModel">
