@@ -16,20 +16,20 @@
           <tr v-for="(info, idx) in customerList"
           v-bind:key="info.id"
           v-on:click="goToCustomerInfo(info.id)">
-            <td>{{ idx + 1 }}</td>
-            <td>{{ info.id }}</td>
-            <td>{{ info.name }}</td>
-            <td>{{ info.phone }}</td>
-          </tr>
-        </template>
-        <tr v-else>
-          <td colspan="4">
-            현재 데이터가 존재하지 않습니다.
-          </td>
+          <td>{{ idx + 1 }}</td>
+          <td>{{ info.id }}</td>
+          <td>{{ info.name }}</td>
+          <td>{{ info.phone }}</td>
         </tr>
-      </tbody>
-    </table>
-  </div>
+      </template>
+      <tr v-else>
+        <td colspan="4">
+          현재 데이터가 존재하지 않습니다.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 </template>
 <script>
   import axios from 'axios' // => AJAX
@@ -57,7 +57,7 @@
       },
       goToCustomerInfo(custId) {
         this.$router.push({ name : 'custInfo' , query : { id : custId }});
-        // query : {key : value} => ?key=value
+        // query : {key : value} => ? key=value
 
         // params
         // 1) route 의 path 속성 : '/target/:uId'
